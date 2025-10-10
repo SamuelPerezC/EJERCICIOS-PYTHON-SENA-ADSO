@@ -2,13 +2,13 @@
 
 # ---------------------------------------------------------
 # FUNCIÓN: mostrar_menu()
-# OBJETIVO: mostrar las opciones disponibles al usuario
+# OBJETIVO: mostrar las opciones del menú al usuario
 # ---------------------------------------------------------
 def mostrar_menu():
-    # No hay variables que definir ni asignar aquí,
-    # solo se muestran mensajes en pantalla.
+    # No hay variables que definir ni asignar aquí.
+    # Solo se procesan los datos mostrando las opciones disponibles.
 
-    # Procesar datos (mostrar el menú):
+    # Procesar los datos (mostrar texto en pantalla)
     print("Digite la letra 'A' para Actualizar Sistema")
     print("Digite la letra 'E' para Eliminar Catálogo")
     print("Digite la letra 'C' para Crear Productos")
@@ -17,57 +17,57 @@ def mostrar_menu():
 
 # ---------------------------------------------------------
 # FUNCIÓN: procesar_opcion(letra)
-# OBJETIVO: analizar la letra ingresada y ejecutar la acción correspondiente
+# OBJETIVO: analizar la opción ingresada por el usuario
 # ---------------------------------------------------------
 def procesar_opcion(letra):
     # Definir variables:
-    # letra → almacena la opción que el usuario digitó
+    # letra → contendrá la opción escrita por el usuario.
 
     # Asignar variables:
-    # Convertimos la letra a minúscula para evitar errores si el usuario usa mayúsculas
-    letra = letra.lower()
+    # Convertimos la letra a minúscula para evitar errores si el usuario usa mayúsculas.
+    opcion = letra.lower()
 
-    # Procesar los datos (evaluar la opción elegida)
-    if letra == 'a':
+    # Procesar los datos (verificar la opción elegida)
+    if opcion == 'a':
         print("Has seleccionado Actualizar Sistema.\n")
-    elif letra == 'e':
+    elif opcion == 'e':
         print("Has seleccionado Eliminar Catálogo.\n")
-    elif letra == 'c':
+    elif opcion == 'c':
         print("Has seleccionado Crear Productos.\n")
-    elif letra == 's':
+    elif opcion == 's':
         print("Finalizó con éxito.\n")
-        return False  # Finaliza el ciclo si el usuario elige 'S'
+        return False  # Esto hace que se termine el ciclo (salir del programa)
     else:
         print("Opción no válida. Intente nuevamente.\n")
 
-    # Si no se elige salir, el ciclo continúa
+    # Si la opción no es 's', el programa continúa ejecutándose
     return True
 
 
 # ---------------------------------------------------------
 # FUNCIÓN PRINCIPAL: main()
-# OBJETIVO: controlar el flujo del programa (mostrar menú, pedir datos, procesarlos)
+# OBJETIVO: controlar el flujo del programa con un ciclo repetitivo
 # ---------------------------------------------------------
 def main():
     # Definir variables:
-    # continuar → controlará si el ciclo debe seguir o detenerse
-    # letra → guardará lo que el usuario digite
+    # letra → guardará lo que el usuario digite en cada repetición.
+    # continuar → controlará si el ciclo debe seguir o terminar.
 
-    while True:  # Inicia un ciclo que se repite hasta que el usuario decida salir
-        # Procesar datos (mostrar el menú al usuario)
+    while True:
+        # Procesar datos (mostrar menú en pantalla)
         mostrar_menu()
 
-        # Asignar variables (leer lo que el usuario digita)
+        # Asignar variables (leer la opción del usuario)
         letra = input("Digite una opción: ")
 
-        # Procesar datos (enviar la opción a la función y recibir el resultado)
+        # Procesar datos (enviar la opción a la función y obtener respuesta)
         continuar = procesar_opcion(letra)
 
-        # Si continuar es False, se rompe el ciclo
+        # Procesar datos (decidir si se detiene el ciclo)
         if not continuar:
-            break  # Sale del bucle si el usuario elige 'S'
+            break  # Sale del ciclo si el usuario elige 'S'
 
-    # Procesar datos (mensaje final)
+    # Procesar datos (mensaje final de cierre)
     print("EL DO-WHILE ha finalizado.\n")
 
 
@@ -75,4 +75,6 @@ def main():
 # LLAMADA A LA FUNCIÓN PRINCIPAL
 # ---------------------------------------------------------
 main()
+
+
 
