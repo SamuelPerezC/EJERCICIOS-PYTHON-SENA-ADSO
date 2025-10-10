@@ -24,12 +24,14 @@ def procesar_opcion(letra):
     # letra → contendrá la opción escrita por el usuario.
 
     # Asignar variables:
-    # Convertimos la letra a minúscula para evitar errores si el usuario usa mayúsculas.
+    
     opcion = letra.lower()
+    # a función .lower() en Python se usa para convertir un texto a minúsculas, el usuario puede escribir A, a, C, etc.
 
     # Procesar los datos (verificar la opción elegida)
     if opcion == 'a':
         print("Has seleccionado Actualizar Sistema.\n")
+        #El \n que ves dentro de las comillas (por ejemplo "Hola\n") es algo que se llama un carácter de escape,y su función es hacer un salto de línea — o sea, bajar el texto a la siguiente línea.
     elif opcion == 'e':
         print("Has seleccionado Eliminar Catálogo.\n")
     elif opcion == 'c':
@@ -75,6 +77,7 @@ def main():
 # LLAMADA A LA FUNCIÓN PRINCIPAL
 # ---------------------------------------------------------
 main()
+
 
 
 
