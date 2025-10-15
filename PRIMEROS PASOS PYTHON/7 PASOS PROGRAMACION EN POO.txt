@@ -5,3 +5,9 @@
 5. HACER INSTANCIA OBJETO
 6. LLAMADOS DE LOS METODOS  (enviar datos) envio Argumentos
 7. REETORNO (almacenar datos)
+
+| Término            | Significado breve                            |
+| ------------------ | -------------------------------------------- |
+| Clase              | Plantilla o molde para crear objetos         |
+| Objeto o Instancia | Un ejemplo real creado a partir de una clase |
+| Instanciar         | Crear un objeto usando una clase             |
